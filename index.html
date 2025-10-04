@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yahyajan — Developer & Online Teacher</title>
+  <meta name="description" content="Portfolio of Yahyajan: projects, writing, and Smart Money Skills." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🟢%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Yahyajan — Developer & Online Teacher" />
+  <meta property="og:description" content="Projects, writing, and Smart Money Skills." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Home">Yahyajan</a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Contact</a>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" hidden>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="section hero container">
+      <div class="hero-text">
+        <h1>Hi, I’m <span class="highlight">Yahyajan</span>.</h1>
+        <p class="lead">
+          I build simple, fast websites and teach <strong>Smart Money Skills</strong>.
+          I’m a student aiming big in tech & business.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="ghost" href="#contact">Hire Me</a>
+        </div>
+        <ul class="meta">
+          <li>📍 Pakistan</li>
+          <li>✉️ <a href="mailto:mryahyajan222@gmail.com">mryahyajan222@gmail.com</a></li>
+          <li>🐙 <a href="https://github.com/MrYahyaJan" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="hero-card card">
+        <img src="https://picsum.photos/960/600?random=12" alt="Featured project preview">
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">Selected work — lightweight, responsive, and accessible.</p>
+      </div>
+
+      <div class="grid">
+        <article class="project card reveal">
+          <img src="https://picsum.photos/800/480?random=1" alt="Landing Page Template">
+          <div class="p">
+            <h3>Landing Page Template</h3>
+            <p>A no-framework starter with semantic HTML, utility CSS, and great Lighthouse scores.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <div class="links">
+              <a class="ghost" href="#" aria-disabled="true">Demo</a>
+              <a class="ghost" href="#" aria-disabled="true">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card reveal">
+          <img src="https://picsum.photos/800/480?random=2" alt="Smart Money Mini Site">
+          <div class="p">
+            <h3>Smart Money Mini-Site</h3>
+            <p>One-pager for my beginner finance class with FAQ and signup CTA.</p>
+            <div class="tags"><span>HTML</span><span>JS</span></div>
+            <div class="links">
+              <a class="ghost" href="#" aria-disabled="true">Demo</a>
+              <a class="ghost" href="#" aria-disabled="true">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card reveal">
+          <img src="https://picsum.photos/800/480?random=3" alt="Personal Blog">
+          <div class="p">
+            <h3>Personal Blog</h3>
+            <p>Simple blog layout ready for Markdown → HTML, with sticky TOC and clean typography.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <div class="links">
+              <a class="ghost" href="#" aria-disabled="true">Demo</a>
+              <a class="ghost" href="#" aria-disabled="true">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WRITING -->
+    <section id="writing" class="section container">
+      <div class="section-head">
+        <h2>Writing</h2>
+        <p class="muted">Notes on learning, money, and building.</p>
+      </div>
+      <ul class="list">
+        <li class="reveal">
+          <a href="#" aria-disabled="true">The 2-hour website playbook</a>
+          <span class="muted">— fast, cheap, and good enough</span>
+        </li>
+        <li class="reveal">
+          <a href="#" aria-disabled="true">Smart Money for Students</a>
+          <span class="muted">— tiny habits that compound</span>
+        </li>
+        <li class="reveal">
+          <a href="#" aria-disabled="true">How I organize projects</a>
+          <span class="muted">— simple systems > complex tools</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about card reveal">
+        <p>
+          I’m a 17-year-old student and online teacher focused on web, finance basics, and
+          long-term thinking. My goals: build tech products, grow businesses, and keep learning.
+        </p>
+        <div class="skills">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Teaching</span>
+          <span class="chip">Personal Finance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Want to collaborate or hire me? Reach out.</p>
+      </div>
+      <div class="contact card reveal">
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! I will reply soon.');">
+          <label>
+            <span>Name</span>
+            <input required aria-label="Your name" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" required aria-label="Your email" placeholder="you@example.com" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea rows="4" required aria-label="Your message" placeholder="How can I help?"></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+          <p class="muted small">or email me at <a href="mailto:mryahyajan222@gmail.com">mryahyajan222@gmail.com</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> Yahyajan — Built with GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
