@@ -2,192 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yahyajan — Developer & Online Teacher</title>
-  <meta name="description" content="Portfolio of Yahyajan: projects, writing, and Smart Money Skills." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yahyajan — Creative Engineer</title>
+  <meta name="description" content="Yahyajan — Web developer & 3D experiences.">
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="style.css" as="style" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🟢%3C/text%3E%3C/svg%3E">
-  <meta property="og:title" content="Yahyajan — Developer & Online Teacher" />
-  <meta property="og:description" content="Projects, writing, and Smart Money Skills." />
-  <meta property="og:type" content="website" />
+  <!-- Three.js via CDN -->
+  <script defer src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <!-- Canvas background -->
+  <canvas id="bg"></canvas>
 
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#home" aria-label="Home">Yahyajan</a>
-      <nav class="menu" aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#writing">Writing</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn">Contact</a>
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Home">
+        <svg class="logo" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#16A34A"/></linearGradient></defs>
+          <circle cx="14" cy="14" r="14" fill="url(#g)"/>
+          <text x="14" y="18.2" text-anchor="middle" font-size="12" font-family="sans-serif" font-weight="800" fill="#052E1B">YJ</text>
+        </svg>
+        <span class="wordmark">Yahyajan</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button class="hamb" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact" class="btn">Contact</a></li>
+        </ul>
       </nav>
-      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-    <nav id="mobileNav" class="mobile-nav" hidden>
-      <a href="#projects">Projects</a>
-      <a href="#writing">Writing</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="btn">Contact</a>
-    </nav>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <h3>Smart Money Skills Website</h3>
-<p>The official site for my beginner finance course with simple lessons and signup form.</p>
-<a class="ghost" href="https://mryahyajan.github.io" target="_blank">Demo</a>
-<a class="ghost" href="https://github.com/MrYahyaJan/yaya.github.io" target="_blank">Code</a>
-
-      <div class="hero-text">
-        <h1>Hi, I’m <span class="highlight">Yahyajan</span>.</h1>
-        <p class="lead">
-          I build simple, fast websites and teach <strong>Smart Money Skills</strong>.
-          I’m a student aiming big in tech & business.
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Creative • 3D • Web</p>
+        <h1>
+          Building premium<br/>
+          <span class="accent">3D websites</span><br/>
+          that convert.
+        </h1>
+        <p class="lede">
+          I craft high-end, performance-focused experiences with elegant motion and real-time 3D.
         </p>
-        <div class="actions">
-          <a class="btn" href="#projects">See Projects</a>
-          <a class="ghost" href="#contact">Hire Me</a>
+        <div class="cta-row">
+          <a class="btn" href="#work">See Work</a>
+          <a class="ghost" href="#contact">Start a Project</a>
         </div>
-        <ul class="meta">
-          <li>📍 Pakistan</li>
-          <li>✉️ <a href="mailto:mryahyajan222@gmail.com">mryahyajan222@gmail.com</a></li>
-          <li>🐙 <a href="https://github.com/MrYahyaJan" target="_blank" rel="noopener">GitHub</a></li>
+        <ul class="badges" aria-label="Highlights">
+          <li>Fast ⚡</li><li>Responsive 📱</li><li>SEO Ready 🔎</li><li>3D WebGL 🧊</li>
         </ul>
       </div>
+
       <div class="hero-card card">
-        <img src="https://picsum.photos/960/600?random=12" alt="Featured project preview">
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section container">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p class="muted">Selected work — lightweight, responsive, and accessible.</p>
-      </div>
-
-      <div class="grid">
-        <article class="project card reveal">
-          <img src="https://picsum.photos/800/480?random=1" alt="Landing Page Template">
-          <div class="p">
-            <h3>Landing Page Template</h3>
-            <p>A no-framework starter with semantic HTML, utility CSS, and great Lighthouse scores.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span></div>
-            <div class="links">
-              <a class="ghost" href="#" aria-disabled="true">Demo</a>
-              <a class="ghost" href="#" aria-disabled="true">Code</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project card reveal">
-          <img src="https://picsum.photos/800/480?random=2" alt="Smart Money Mini Site">
-          <div class="p">
-            <h3>Smart Money Mini-Site</h3>
-            <p>One-pager for my beginner finance class with FAQ and signup CTA.</p>
-            <div class="tags"><span>HTML</span><span>JS</span></div>
-            <div class="links">
-              <a class="ghost" href="#" aria-disabled="true">Demo</a>
-              <a class="ghost" href="#" aria-disabled="true">Code</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project card reveal">
-          <img src="https://picsum.photos/800/480?random=3" alt="Personal Blog">
-          <div class="p">
-            <h3>Personal Blog</h3>
-            <p>Simple blog layout ready for Markdown → HTML, with sticky TOC and clean typography.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span></div>
-            <div class="links">
-              <a class="ghost" href="#" aria-disabled="true">Demo</a>
-              <a class="ghost" href="#" aria-disabled="true">Code</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- WRITING -->
-    <section id="writing" class="section container">
-      <div class="section-head">
-        <h2>Writing</h2>
-        <p class="muted">Notes on learning, money, and building.</p>
-      </div>
-      <ul class="list">
-        <li class="reveal">
-          <a href="#" aria-disabled="true">The 2-hour website playbook</a>
-          <span class="muted">— fast, cheap, and good enough</span>
-        </li>
-        <li class="reveal">
-          <a href="#" aria-disabled="true">Smart Money for Students</a>
-          <span class="muted">— tiny habits that compound</span>
-        </li>
-        <li class="reveal">
-          <a href="#" aria-disabled="true">How I organize projects</a>
-          <span class="muted">— simple systems > complex tools</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <div class="section-head">
-        <h2>About</h2>
-      </div>
-      <div class="about card reveal">
-        <p>
-          I’m a 17-year-old student and online teacher focused on web, finance basics, and
-          long-term thinking. My goals: build tech products, grow businesses, and keep learning.
-        </p>
-        <div class="skills">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Teaching</span>
-          <span class="chip">Personal Finance</span>
+        <h3>Smart Money Skills Website</h3>
+        <p>The official site for my beginner finance course with simple lessons and a signup form.</p>
+        <div class="row">
+          <a class="ghost" href="https://mryahyajan.github.io" target="_blank" rel="noopener">Demo</a>
+          <a class="ghost" href="https://github.com/MrYahyaJan/yaya.github.io" target="_blank" rel="noopener">Code</a>
         </div>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">Want to collaborate or hire me? Reach out.</p>
-      </div>
-      <div class="contact card reveal">
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! I will reply soon.');">
-          <label>
-            <span>Name</span>
-            <input required aria-label="Your name" placeholder="Your name" />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" required aria-label="Your email" placeholder="you@example.com" />
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea rows="4" required aria-label="Your message" placeholder="How can I help?"></textarea>
-          </label>
-          <button class="btn" type="submit">Send</button>
-          <p class="muted small">or email me at <a href="mailto:mryahyajan222@gmail.com">mryahyajan222@gmail.com</a></p>
-        </form>
-      </div>
-    </section>
+    </div>
   </main>
 
-  <footer class="footer container">
-    <p>© <span id="year"></span> Yahyajan — Built with GitHub Pages.</p>
-  </footer>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="wrap two">
+      <div>
+        <h2>About me</h2>
+        <p>
+          I’m Yahyajan — a developer focused on premium interfaces and immersive 3D. I combine
+          clean UI, subtle micro-interactions, and GPU-accelerated visuals to make brands feel
+          expensive, modern, and trustworthy.
+        </p>
+        <ul class="list">
+          <li>Stack: HTML • CSS • JS • Three.js</li>
+          <li>Performance: Lighthouse 90+ targets</li>
+          <li>Hosting: GitHub Pages + Custom Domain</li>
+        </ul>
+      </div>
+      <div class="card specs">
+        <h3>Project Approach</h3>
+        <ol>
+          <li>Discovery & brand direction</li>
+          <li>Hi-fi design & motion plan</li>
+          <li>3D scene + performance passes</li>
+          <li>Deploy + analytics + polish</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js" defer></script>
+  <!-- Work -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Yaya Finance</h3>
+          <p>Elegant course landing page with clean typography and lead capture.</p>
+          <a class="btn small" href="#contact">Request a walkthrough</a>
+        </article>
+        <article class="card">
+          <h3>3D Product Teaser</h3>
+          <p>Interactive, rotating hero object with soft shadows and parallax.</p>
+          <a class="btn small" href="#contact">See similar</a>
+        </article>
+        <article class="card">
+          <h3>Luxury Services</h3>
+          <p>Minimal dark theme, smooth scroll, glass cards, premium feel.</p>
+          <a class="btn small" href="#contact">Learn more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="wrap two">
+      <div>
+        <h2>Let’s build something legendary</h2>
+        <p>Tell me about your idea and I’ll reply with a tight plan and fixed quote.</p>
+        <ul class="list">
+          <li>Email: <a href="mailto:mryahyajan222@gmail.com">mryahyajan222@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/MrYahyaJan" target="_blank" rel="noopener">MrYahyaJan</a></li>
+        </ul>
+      </div>
+      <form class="card form" action="https://formspree.io/f/xknldvqo" method="POST">
+        <label>Full name<input name="name" required /></label>
+        <label>Email<input name="email" type="email" required /></label>
+        <label>Project budget<select name="budget" required>
+          <option value="">Select…</option>
+          <option>Under $5k</option>
+          <option>$5k–$15k</option>
+          <option>$15k–$50k</option>
+          <option>$50k+</option>
+        </select></label>
+        <label>Message<textarea name="message" rows="4" placeholder="What are we building?"></textarea></label>
+        <button class="btn" type="submit">Send</button>
+        <p class="muted tiny">By submitting, you agree to be contacted about your project.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer">
+      <p>© <span id="year"></span> Yahyajan • Crafted with care.</p>
+      <a class="ghost" href="404.html">404 test</a>
+    </div>
+  </footer>
 </body>
 </html>
